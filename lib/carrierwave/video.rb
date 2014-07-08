@@ -67,7 +67,7 @@ module CarrierWave
         else
           file.transcode(tmp_path, @options.format_params, @options.encoder_options)
         end
-        File.rename tmp_path, current_path
+        File.rename tmp_path, "madefile.#{format}"
       end
     end
 
